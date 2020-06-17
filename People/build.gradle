@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.2.6.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+}
+
+group 'com.icatpark.harbor.people'
+version '0.0.1'
+
+sourceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    jcenter()
+    mavenCentral()
+    mavenLocal()
+}
+
+springBoot {
+    mainClassName = 'com.icatpark.harbor.people.Application'
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
